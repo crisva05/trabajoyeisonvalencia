@@ -1,0 +1,287 @@
+/* =========================
+   FUENTE
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+   VARIABLES
+========================= */
+:root{
+    --azul:#1f4fa3;
+    --azul2:#3f6ec2;
+    --gris:#f4f6f9;
+    --texto:#333;
+    --rojo:#e31b23;
+}
+
+/* =========================
+   RESET
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--gris);
+    color:var(--texto);
+}
+
+/* =========================
+   HEADER
+========================= */
+.header-top{
+    background:var(--azul);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+}
+
+/* PEGA ESTO EN styles.css Y REEMPLAZA EL CSS ANTERIOR DEL LOGO */
+
+.logo{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.logo img{
+    width:40px;
+    height:40px;
+    object-fit:cover;
+    border-radius:50%;
+    border:2px solid white;
+}
+
+.search-bar input{
+    width:350px;
+    padding:10px 15px;
+    border:none;
+    border-radius:25px;
+    outline:none;
+    font-size:15px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar{
+    background:white;
+    padding:15px 40px;
+    display:flex;
+    gap:25px;
+    border-bottom:1px solid #ddd;
+    flex-wrap:wrap;
+}
+
+.navbar a{
+    text-decoration:none;
+    color:#444;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:var(--azul);
+}
+
+/* =========================
+   BANNER
+========================= */
+.banner{
+    background:
+    linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+    url("banner.jpg");
+    background-size:cover;
+    background-position:center;
+    height:280px;
+}
+
+/* =========================
+   CONTENIDO
+========================= */
+.container{
+    display:flex;
+    gap:50px;
+    padding:50px;
+    align-items:center;
+}
+
+/* =========================
+   IZQUIERDA
+========================= */
+.content-left{
+    flex:1;
+}
+
+.content-left h2{
+    font-size:34px;
+    margin-bottom:20px;
+    color:var(--azul);
+}
+
+.info p{
+    margin-bottom:12px;
+    font-size:18px;
+}
+
+/* =========================
+   BOTONES AZULES
+========================= */
+.buttons{
+    margin-top:25px;
+}
+
+.buttons button{
+    background:var(--azul2);
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:8px;
+    margin-right:12px;
+    cursor:pointer;
+    transition:.3s;
+    font-size:15px;
+}
+
+.buttons button:hover{
+    background:var(--azul);
+    transform:translateY(-2px);
+}
+
+/* =========================
+   TARJETA DERECHA
+========================= */
+.card{
+    flex:1;
+    height:350px;
+    border-radius:15px;
+    background:
+    linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
+    url("lenguaje.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:25px;
+    box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+.card h3{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.card p{
+    font-size:18px;
+}
+
+/* =========================
+   BOTONES ROJOS
+========================= */
+.action-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    padding:10px 20px 45px;
+}
+
+.btn-red{
+    background:var(--rojo);
+    color:white;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:8px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-red:hover{
+    background:#be1018;
+    transform:translateY(-2px);
+}
+
+.btn-red.outline{
+    border:3px solid #2b6cff;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer{
+    background:var(--azul);
+    color:white;
+    text-align:center;
+    padding:25px 20px;
+}
+
+.footer p{
+    margin-bottom:8px;
+}
+
+.footer .sub{
+    font-size:14px;
+    opacity:.95;
+}
+
+.footer i{
+    margin:0 5px;
+    font-size:16px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:950px){
+
+    .container{
+        flex-direction:column;
+        padding:35px 20px;
+    }
+
+    .search-bar input{
+        width:220px;
+    }
+
+    .content-left h2{
+        font-size:28px;
+    }
+
+    .card{
+        width:100%;
+    }
+}
+
+@media(max-width:600px){
+
+    .header-top{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .navbar{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .buttons button{
+        display:block;
+        width:100%;
+        margin-bottom:10px;
+    }
+
+    .search-bar input{
+        width:100%;
+    }
+}
